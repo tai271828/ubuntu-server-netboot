@@ -211,7 +211,7 @@ if __name__ == "__main__":
     download_bootnet(release, architecture, staging_dir)
 
     os.mkdir(os.path.join(staging_dir, "casper"))
-    for f in ["vmlinuz", "initrd"]:
+    for f in ["vmlinuz", "initrd", "hwe-vmlinuz", "hwe-initrd"]:
         iso.extract_file(
             os.path.join(os.sep, "casper", f),
             os.path.join(staging_dir, "casper", f),
